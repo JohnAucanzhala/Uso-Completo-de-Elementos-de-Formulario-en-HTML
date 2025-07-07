@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario HTML5 Completo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body {
+    background-color: #f8f9fa;
+  }
+  .formulario-container {
+    border: 2px solid #0d6efd;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #ffffff;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  input[type="range"],
+  input[type="color"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="password"],
+  input[type="search"],
+  input[type="file"],
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="hidden"],
+  select,
+  textarea {
+    border: 2px solid #3f2c2c !important;
+    box-shadow: none;
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="container mt-5 mb-4">
+    <h1 class="text-center text-primary mb-4">Formulario HTML5 Completo</h1>
+    <form action="server.php" method="POST" enctype="multipart/form-data" class="formulario-container">
+
+      <!-- // nombre completo del usuario -->
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre">
+      </div>
+
+      <!-- // correo -->
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico:</label>
+        <input type="email" class="form-control" id="correo" name="correo">
+      </div>
+
+      <!-- // número celular -->
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono:</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono">
+      </div>
+
+      <!-- // sitio web -->
+      <div class="mb-3">
+        <label for="web" class="form-label">Sitio Web:</label>
+        <input type="url" class="form-control" id="web" name="web">
+      </div>
+
+      <!-- // edad -->
+      <div class="mb-3">
+        <label for="edad" class="form-label">Edad:</label>
+        <input type="number" class="form-control" id="edad" name="edad">
+      </div>
+
+      <!-- // nivel de satisfacción del usuario -->
+      <div class="mb-3">
+        <label for="satisfaccion" class="form-label">Nivel de satisfacción:</label>
+        <input type="range" class="form-range" id="satisfaccion" name="satisfaccion" min="0" max="10">
+      </div>
+
+      <!-- // elección de color favorito -->
+      <div class="mb-3">
+        <label for="color" class="form-label">Color favorito:</label>
+        <input type="color" class="form-control form-control-color" id="color" name="color" value="#0000ff">
+      </div>
+
+      <!-- // fecha de nacimiento -->
+      <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha de nacimiento:</label>
+        <input type="date" class="form-control" id="fecha" name="fecha">
+      </div>
+
+      <!-- // hora actual -->
+      <div class="mb-3">
+        <label for="hora" class="form-label">Hora actual:</label>
+        <input type="time" class="form-control" id="hora" name="hora">
+      </div>
+
+      <!-- // fecha y hora  -->
+      <div class="mb-3">
+        <label for="fechahora" class="form-label">Fecha y Hora Local:</label>
+        <input type="datetime-local" class="form-control" id="fechahora" name="fechahora">
+      </div>
+
+      <!-- // mes actual o significativo -->
+      <div class="mb-3">
+        <label for="mes" class="form-label">Mes (elige uno relevante):</label>
+        <input type="month" class="form-control" id="mes" name="mes">
+      </div>
+
+      <!-- // semana del año ( planificación semanal) -->
+      <div class="mb-3">
+        <label for="semana" class="form-label">Semana del año:</label>
+        <input type="week" class="form-control" id="semana" name="semana">
+      </div>
+
+      <!-- // contraseña -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+
+      <!-- // aplicacion -->
+      <div class="mb-3">
+        <label for="busqueda" class="form-label">Para que aplicas:</label>
+        <input type="search" class="form-control" id="busqueda" name="busqueda">
+      </div>
+
+      <!-- // archivo -->
+      <div class="mb-3">
+        <label for="archivo" class="form-label">Subir un archivo:</label>
+        <input type="file" class="form-control" id="archivo" name="archivo">
+      </div>
+
+      <!-- // lenguajes conocidos  -->
+      <div class="mb-3">
+        <label class="form-label">Lenguajes que conoces:</label><br>
+        <input type="checkbox" name="lenguajes[]" value="HTML"> HTML<br>
+        <input type="checkbox" name="lenguajes[]" value="CSS"> CSS<br>
+        <input type="checkbox" name="lenguajes[]" value="JavaScript"> JavaScript<br>
+        Otra opción: <input type="text" class="form-control mt-1" name="lenguajes[]">
+      </div>
+
+      <!-- // género -->
+      <div class="mb-3">
+        <label class="form-label">Sexo:</label><br>
+        <input type="radio" name="sexo" value="Masculino"> Masculino<br>
+        <input type="radio" name="sexo" value="Femenino"> Femenino<br>
+      </div>
+
+      <!-- // campo oculto -->
+      <input type="hidden" name="oculto" value="Este campo es oculto">
+
+      <!-- // país con opción de otro -->
+      <div class="mb-3">
+        <label for="pais" class="form-label">País:</label>
+        <select name="pais" id="pais" class="form-select">
+          <option value="Ecuador">Ecuador</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <input type="text" name="otro_pais" class="form-control mt-2" placeholder="Si elegiste 'Otro', escribe aquí tu país">
+      </div>
+
+      <!-- // comentarios -->
+      <div class="mb-3">
+        <label for="comentarios" class="form-label">Comentarios adicionales:</label>
+        <textarea name="comentarios" id="comentarios" rows="4" class="form-control"></textarea>
+      </div>
+
+      <!-- // botones -->
+      <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-secondary">Reiniciar</button>
+        <button type="button" class="btn btn-info" onclick="alert('¡Hola John!')">Presióname</button>
+      </div>
+
+    </form>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    John Aucanzhala | NRC: 23357 | APLICACIÓN TECNOLOGÍAS WEB
+  </footer>
+
+</body>
+</html>
